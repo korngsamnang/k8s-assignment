@@ -26,3 +26,6 @@ The goal of this project is to set up a Kubernetes cluster on EC2 instances, dep
 -   AWS account with permissions to create EC2 instances.
 -   Terraform installed locally.
 -   Basic understanding of Kubernetes concepts (pods, services, configmaps, secrets, etc).
+
+    > Kubernetes Architecture
+    > ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406651320-3de14bfa-d09d-4b56-b509-e4ceccb9caac.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T091710Z&X-Amz-Expires=300&X-Amz-Signature=af9190f6d0a21cc4d63ed70e0bb5b323d27c55b517d7f1bd3423c179becadeb5&X-Amz-SignedHeaders=host)
