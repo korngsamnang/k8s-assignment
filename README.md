@@ -36,7 +36,7 @@ We will deploy a mongodb database and a web application which will connect to th
 And finally we will make our application accessible externally from the browser.
 
 > Project Overview
-> ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406654818-b7211761-24a5-40c4-83e0-a9381f4efef8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T102600Z&X-Amz-Expires=300&X-Amz-Signature=40dbfed13e3d697b9c7100906a2b44e230ace8c1edf01c29afb85444a45acb33&X-Amz-SignedHeaders=host)
+> ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406658204-d6bece49-c501-4718-95a5-671e4d45790a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T113308Z&X-Amz-Expires=300&X-Amz-Signature=18c75e6832e035f43ce4159159883982dc4ada3278642484e45ba4990af49722&X-Amz-SignedHeaders=host)
 
 ## Set up EC2 Instances with Terraform
 
