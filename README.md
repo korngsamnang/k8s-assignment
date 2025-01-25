@@ -8,10 +8,6 @@
 4. [Set up EC2 Instances with Terraform](#set-up-ec2-instances-with-terraform)
 5. [Creating a Cluster on EC2 (from Scratch)](#creating-a-cluster-on-ec2-from-scratch)
 6. [Deploy WebApp with MongoDB](#deploy-webapp-with-mongodb)
-7. [Access the Application](#access-the-application)
-8. [Troubleshooting](#troubleshooting)
-9. [Conclusion](#conclusion)
-10. [References](#references)
 
 ## 1. Goal
 
@@ -74,7 +70,7 @@ terraform apply
 
 Confirm with `yes` when prompted.
 
-## Creating a Cluster on EC2 (from Scratch)
+## 5. Creating a Cluster on EC2 (from Scratch)
 
 ### Initial Setup on All Servers (Control Plane, Worker 1, Worker 2)
 
@@ -240,6 +236,59 @@ Confirm with `yes` when prompted.
     ```
 
 > k8s cluster
-> ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406659927-a68aef12-6415-4e03-9302-c2c4c85e2226.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T120848Z&X-Amz-Expires=300&X-Amz-Signature=8731839685e555e174fd18df25aec910615885b9f14f2552aa02876c2a917d65&X-Amz-SignedHeaders=host)
+> ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406683377-7a9842cc-2381-4ff0-83c1-5f90109accc3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T192656Z&X-Amz-Expires=300&X-Amz-Signature=0e0189a1ace383b699bce40593a61b8832991b2964aefb229ea1457b4215112b&X-Amz-SignedHeaders=host)
 
-## 5. Deploy WebApp with MongoDB
+## 6. Deploy WebApp with MongoDB
+
+### Prerequisites
+
+Before deploying the web app and MongoDB, make sure you have:
+
+-   A running Kubernetes cluster (with a control plane and worker nodes).
+-   The required configuration files in the `app/` directory:
+    -   `mongo-config.yaml`
+    -   `mongo-secret.yaml`
+    -   `mongo.yaml`
+    -   `webapp.yaml`
+
+### Step 1: Apply MongoDB Configuration
+
+1. **MongoDB ConfigMap**:
+
+    - `mongo-config.yaml` contains the MongoDB configuration settings. Apply the ConfigMap:
+        ```bash
+        kubectl apply -f app/mongo-config.yaml
+        ```
+
+2. **MongoDB Secret**:
+
+    - `mongo-secret.yaml` contains sensitive data (e.g., passwords) for MongoDB. Apply the Secret:
+        ```bash
+        kubectl apply -f app/mongo-secret.yaml
+        ```
+
+3. **MongoDB Deployment**:
+    - `mongo.yaml` defines the MongoDB deployment (including the StatefulSet or Deployment for MongoDB). Apply the MongoDB deployment:
+        ```bash
+        kubectl apply -f app/mongo.yaml
+        ```
+
+### Step 2: Apply Web App Configuration
+
+1. **Web App Deployment**:
+    - `webapp.yaml` defines the deployment of your web app, including the service that exposes it. Apply the web app configuration:
+        ```bash
+        kubectl apply -f app/webapp.yaml
+        ```
+
+### Step 3: Verify Deployment
+
+To ensure that everything is deployed correctly, check the status of the pods and services:
+
+-   **Check Pods**:
+    ```bash
+    kubectl get pods
+    kubectl get svc
+    ```
+    > Verify Deployment
+    > ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406683069-a41b97f1-63d9-479e-9de1-2d37af6c7993.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T192034Z&X-Amz-Expires=300&X-Amz-Signature=d0138cfadeefac40c033377cc2af3227313685017bee48ad28c1920de1db49de&X-Amz-SignedHeaders=host)
