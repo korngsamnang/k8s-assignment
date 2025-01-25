@@ -291,4 +291,4 @@ To ensure that everything is deployed correctly, check the status of the pods an
     kubectl get svc
     ```
     > Verify Deployment
-    > ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406683069-a41b97f1-63d9-479e-9de1-2d37af6c7993.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T192034Z&X-Amz-Expires=300&X-Amz-Signature=d0138cfadeefac40c033377cc2af3227313685017bee48ad28c1920de1db49de&X-Amz-SignedHeaders=host)
+    > ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406683632-1d1aa73e-3750-4a9e-bf92-76da67e32ef9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T193051Z&X-Amz-Expires=300&X-Amz-Signature=2dd51ceefaff0bbc72b5ee496ee475014fa622126e84c6e4bd226f9c85f7c9dc&X-Amz-SignedHeaders=host)
