@@ -9,7 +9,7 @@
 5. [Creating a Cluster on EC2 (from Scratch)](#creating-a-cluster-on-ec2-from-scratch)
 6. [Deploy WebApp with MongoDB](#deploy-webapp-with-mongodb)
 
-## 1. Goal
+## Goal
 
 The goal of this project is to set up a Kubernetes cluster on EC2 instances, deploy a web application, and connect it to a MongoDB database. This includes:
 
@@ -17,7 +17,7 @@ The goal of this project is to set up a Kubernetes cluster on EC2 instances, dep
 2. Deploying a web application that connects to MongoDB.
 3. Exposing the web app for external access.
 
-## 2. Prerequisites
+## Prerequisites
 
 -   AWS account with permissions to create EC2 instances.
 -   Terraform installed locally.
@@ -26,7 +26,7 @@ The goal of this project is to set up a Kubernetes cluster on EC2 instances, dep
     > Kubernetes Architecture
     > ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406651320-3de14bfa-d09d-4b56-b509-e4ceccb9caac.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T091710Z&X-Amz-Expires=300&X-Amz-Signature=af9190f6d0a21cc4d63ed70e0bb5b323d27c55b517d7f1bd3423c179becadeb5&X-Amz-SignedHeaders=host)
 
-## 3. Project Overview
+## Project Overview
 
 We will deploy a mongodb database and a web application which will connect to the mongodb using external configuration data from cofigmap and secret.
 And finally we will make our application accessible externally from the browser.
@@ -34,7 +34,7 @@ And finally we will make our application accessible externally from the browser.
 > Project Overview
 > ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406658204-d6bece49-c501-4718-95a5-671e4d45790a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T113308Z&X-Amz-Expires=300&X-Amz-Signature=18c75e6832e035f43ce4159159883982dc4ada3278642484e45ba4990af49722&X-Amz-SignedHeaders=host)
 
-## 4. Set up EC2 Instances with Terraform
+## Set up EC2 Instances with Terraform
 
 ### Step 1: Install Prerequisites
 
@@ -70,7 +70,7 @@ terraform apply
 
 Confirm with `yes` when prompted.
 
-## 5. Creating a Cluster on EC2 (from Scratch)
+## Creating a Cluster on EC2 (from Scratch)
 
 ### Initial Setup on All Servers (Control Plane, Worker 1, Worker 2)
 
@@ -238,7 +238,7 @@ Confirm with `yes` when prompted.
 > k8s cluster
 > ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/99709883/406683377-7a9842cc-2381-4ff0-83c1-5f90109accc3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250125T192656Z&X-Amz-Expires=300&X-Amz-Signature=0e0189a1ace383b699bce40593a61b8832991b2964aefb229ea1457b4215112b&X-Amz-SignedHeaders=host)
 
-## 6. Deploy WebApp with MongoDB
+## Deploy WebApp with MongoDB
 
 ### Prerequisites
 
